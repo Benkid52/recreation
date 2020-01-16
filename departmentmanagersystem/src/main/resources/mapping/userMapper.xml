@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+    <select id="getId" parameterType="java.lang.String" resultType="java.lang.Integer">
+        SELECT id FROM user WHERE account = #{account}
+    </select>
+
+    <select id="selectUser" parameterType="java.lang.Integer" resultType="pojo.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <insert id="insertUser" parameterType="pojo.User">
+        INSERT INTO user(account, password, admin) VALUES(#{account}, #{password}, #{admin})
+    </insert>
+
+    <update id="updateUser" parameterType="pojo.User">
+        UPDATE user SET password = #{password} WHERE id = #{id}
+    </update>
+
+</mapper>

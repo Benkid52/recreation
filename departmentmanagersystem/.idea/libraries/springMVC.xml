@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="springMVC">
+    <CLASSES>
+      <root url="file://D:/springMVC/springMVC" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://D:/springMVC/springMVC" recursive="false" />
+  </library>
+</component>
