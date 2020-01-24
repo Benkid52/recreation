@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="belong">
+
+    <select id="selectById" parameterType="java.lang.Integer" resultType="pojo.Belong">
+        SELECT * FROM belong WHERE id = #{id}
+    </select>
+
+    <update id="updateById" parameterType="pojo.Belong">
+        UPDATE belong SET department = #{department}, position_ = #{position}, concrete = #{concrete} WHERE id = #{id}
+    </update>
+
+</mapper>
